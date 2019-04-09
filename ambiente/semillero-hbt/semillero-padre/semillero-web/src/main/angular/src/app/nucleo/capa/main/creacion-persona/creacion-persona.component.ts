@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CreacionPersonaComponent implements OnInit {
   
   public id:number = 10;
-  public nombre:string = "Santiago";
+  public nombre:string = "Alejandra";
   public apellido:string = "Cardozo";
   public numeroIdentificacion:string = "1097402974";
   public tipoIdentificacion:string = "";

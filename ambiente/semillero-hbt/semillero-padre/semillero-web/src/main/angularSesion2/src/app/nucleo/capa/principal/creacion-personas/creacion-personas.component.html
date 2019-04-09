@@ -1,0 +1,91 @@
+
+<h2>{{ header }}</h2>
+
+
+<div style="padding:10px ; float:left ; width: 30%; text-align: justify">
+<form>
+    <p>
+        <label for="name">Id persona: </label> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="id" type="text" [(ngModel)]="persona.id" placeholder=" Id persona" />
+    </p>
+
+    <p>
+        <label for="name">Nombre persona: </label> 
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="nombre" type="text" [(ngModel)]="persona.nombre" placeholder=" Nombre persona" />
+    </p>
+
+    <p>
+        <label for="name">Apellido persona: </label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="apellido" type="text" [(ngModel)]="persona.apellido"  placeholder=" Apellido persona" />
+    </p> 
+    
+    <p>
+        <label for="name">Fecha Nacimiento: </label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="apellido" type="date" [(ngModel)]="persona.fechaNaci"  placeholder=" Fecha nacimiento" />
+    </p>
+       
+</form>
+</div>
+
+<div style="padding: 10px; float: left;; width: 50%; text-align: justify">
+
+    <form>
+    <p>
+        <label for="name">Tipo Identificacion: </label>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select >
+                 <option  >Cedula </option >
+                 <option > Targeta Identidad </option >
+                        
+            </select>
+            
+    </p>
+    <p>
+        <label for="name">Numero Identificacion: </label>
+        <input name="Identificacion" type="text" [(ngModel)]="persona.numeroIdentificacion"  placeholder=" Numero Identificacion" />
+
+    </p>
+
+    <p>
+        <label for="name">Mayor edad: </label>   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" [(ngModel)]="persona.mayorEdad" name="Mayor" value="true"> Mayor
+        <input type="checkbox" [(ngModel)]="persona.mayorEdad" name="Menor" value="false"> Menor
+    </p>
+
+    <p>
+        <label for="name">Sexo: </label>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="Sexo" [(ngModel)]="persona.sexo" value="Masculino"> Masculino
+        <input type="radio" name="Sexo" [(ngModel)]="persona.sexo" value="Femenino"> Femenino
+    </p>
+    <div>
+        <input value="Guardar" type="submit" (click) = "guardar()">
+        <ul>
+    
+    
+            <li *ngFor ="let persona  of personas " (click) = "abrirEditar(persona)">
+            <span>{{persona.id | lowercase}} </span> 
+            <span>{{persona.nombre | lowercase}} </span> 
+            <span>{{persona.apellido | lowercase}} </span>
+            <span>{{persona.fechaNaci | lowercase}} </span> 
+            <span>{{persona.tipoIdentificacion | lowercase}} </span>
+            <span>{{persona.numeroIdentificacion | lowercase}} </span> 
+            <span>{{persona.mayorEdad | lowercase}} </span> 
+            <span>{{persona.sexo | lowercase}} </span> 
+
+               
+            </li>
+        </ul>
+    </div>
+    </form>
+    
+</div>
+
+
+
+

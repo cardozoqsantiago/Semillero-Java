@@ -5,8 +5,6 @@ import { EncabezadoComponent } from './nucleo/capa/encabezado/encabezado.compone
 import { MainComponent } from './nucleo/capa/main/main.component';
 import { PiepaginaComponent } from './nucleo/capa/piepagina/piepagina.component';
 import { CreacionPersonaComponent } from './nucleo/capa/main/creacion-persona/creacion-persona.component';
-
-
 const routes: Routes = [
 {path: 'Encabezado' , component: EncabezadoComponent},
 {path: 'Main' , component: MainComponent},
