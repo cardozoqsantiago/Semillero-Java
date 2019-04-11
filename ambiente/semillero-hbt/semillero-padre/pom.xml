@@ -13,7 +13,7 @@
 	<name>Semillero padre HBT</name>
 	<modules>
 		<module>semillero-servicios</module>
-		<module>semillero-web</module>
+<!-- 		<module>semillero-web</module> -->
 		<module>semillero-ear</module>
   </modules>
 </project>
